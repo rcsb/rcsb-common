@@ -1,0 +1,22 @@
+# Mac Specific ignores
+.DS_Store
+
+# Partial files or compiled files are excluded
+*~
+*.class
+*.war
+*.ear
+target/
+
+# No Java error dumps
+hs_err_pid*
+
+# No IntelliJ files should be in git
+.idea
+
+# no eclipse files
+.project
+.profile
+.settings
+.classpath
+
