@@ -3,11 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- The top level maven project for all RCSB projects -->
-	<!-- Mainly used for controlling dependencies and plugins in a single place.
-	     Children projects must not declare versions/configurations for dependencies that are in 
-	     dependencyManagement here, or for plugins that are in pluginManagement here -->
-	
-	
+	<!-- Mainly used for controlling dependencies and plugins in a single place. 
+		Children projects must not declare versions/configurations for dependencies 
+		that are in dependencyManagement here, or for plugins that are in pluginManagement 
+		here -->
+
+
 	<groupId>org.rcsb</groupId>
 	<artifactId>rcsb-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -25,6 +26,8 @@
 		<slf4j.version>1.7.20</slf4j.version>
 		<log4j.version>2.6.1</log4j.version>
 		<junit.version>4.8.2</junit.version>
+		<!-- jersey version both for client and server -->
+		<jersey2.version>2.23.1</jersey2.version>
 	</properties>
 
 	<dependencyManagement>
@@ -69,13 +72,51 @@
 				<version>${log4j.version}</version>
 				<scope>runtime</scope>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
 				<version>3.1.0</version>
 			</dependency>
-			
+
+			<!-- Jersey client and server -->
+			<dependency>
+				<groupId>org.glassfish.jersey.containers</groupId>
+				<artifactId>jersey-container-servlet</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-json-jackson</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-moxy</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+
+			<!-- to enable entity filtering -->
+			<dependency>
+				<groupId>org.glassfish.jersey.ext</groupId>
+				<artifactId>jersey-entity-filtering</artifactId>
+				<version>${jersey2.version}</version>
+			</dependency>
+
+
 
 		</dependencies>
 	</dependencyManagement>
