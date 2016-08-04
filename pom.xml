@@ -23,9 +23,9 @@
 
 		<jdk.version>1.8</jdk.version>
 		<maven.enforcer.jdk-version>1.8</maven.enforcer.jdk-version>
-		<slf4j.version>1.7.20</slf4j.version>
-		<log4j.version>2.6.1</log4j.version>
-		<junit.version>4.8.2</junit.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<log4j.version>2.6.2</log4j.version>
+		<junit.version>4.12</junit.version>
 		<!-- jersey version both for client and server -->
 		<jersey2.version>2.23.1</jersey2.version>
 	</properties>
