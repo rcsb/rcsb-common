@@ -134,6 +134,26 @@
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-nop</artifactId>
 					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jersey</groupId>
+						<artifactId>jersey-server</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jersey</groupId>
+						<artifactId>jersey-json</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jersey</groupId>
+						<artifactId>jersey-client</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jersey</groupId>
+						<artifactId>jersey-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.jersey</groupId>
+						<artifactId>jersey-grizzly</artifactId>
+					</exclusion>
 				</exclusions>
 			</dependency>
 
