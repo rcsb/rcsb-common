@@ -28,6 +28,11 @@
 		<junit.version>4.12</junit.version>
 		<!-- jersey version both for client and server -->
 		<jersey2.version>2.23.1</jersey2.version>
+
+		<!-- Spark used by both yosemite and redwood -->
+		<spark.version>1.6.1</spark.version>
+		<scala.version>2.11</scala.version>
+
 	</properties>
 
 	<dependencyManagement>
@@ -114,6 +119,58 @@
 				<groupId>org.glassfish.jersey.ext</groupId>
 				<artifactId>jersey-entity-filtering</artifactId>
 				<version>${jersey2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-core_${scala.version}</artifactId>
+				<version>${spark.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-nop</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-sql_${scala.version}</artifactId>
+				<version>${spark.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-nop</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-hive_${scala.version}</artifactId>
+				<version>${spark.version}</version>
+			</dependency>
+
+			<!-- for CSV support -->
+			<dependency>
+				<groupId>com.databricks</groupId>
+				<artifactId>spark-csv_${scala.version}</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.39</version>
 			</dependency>
 
 
