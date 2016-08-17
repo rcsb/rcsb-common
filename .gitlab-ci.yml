@@ -8,13 +8,13 @@ build:
   stage: build
   script:
 #    Handy for debugging
+    - hostname
     - pwd
     - mvn -v
 #    Build via maven
-    - mvn --batch-mode --errors -U clean package
+    - mvn --batch-mode --errors -U clean package deploy
 #    See results (size)
-    - cd target
-    - ls -alh *.war
+    - ls -alh *
 #    Rename file to have match branch + commit tag
     #- echo "We will rename [pdb.war] to [${FILENAME}]"
     #- mv pdb.war ${FILENAME}
