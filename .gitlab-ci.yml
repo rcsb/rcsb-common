@@ -13,3 +13,4 @@ build:
     - mvn --batch-mode --errors -U clean deploy
   tags:
     - Java
+
