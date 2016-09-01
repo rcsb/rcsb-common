@@ -28,6 +28,8 @@
 		<junit.version>4.12</junit.version>
 		<!-- jersey version both for client and server -->
 		<jersey2.version>2.23.1</jersey2.version>
+		<spark.version>2.0.0</spark.version>
+		<fasterxml.jackson.version>2.6.5</fasterxml.jackson.version>
 	</properties>
 
 	<distributionManagement>
@@ -137,7 +139,49 @@
 				<version>5.1.39</version>
 			</dependency>
 			
+			<dependency> <!-- Spark dependency -->
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.11</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		
+		<!-- for CSV support -->
+		<dependency>
+		    <groupId>com.databricks</groupId>
+		    <artifactId>spark-csv_2.10</artifactId>
+		    <version>1.4.0</version>
+		</dependency>
+		
+		<dependency> 
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${fasterxml.jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>${fasterxml.jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>${fasterxml.jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.0</version>
+		</dependency>
+		
 		</dependencies>
 	</dependencyManagement>
 
