@@ -138,50 +138,50 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>5.1.39</version>
 			</dependency>
-			
-			<dependency> <!-- Spark dependency -->
-			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.11</artifactId>
-			<version>${spark.version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-sql_2.11</artifactId>
-			<version>${spark.version}</version>
-		</dependency>
-		
-		<!-- for CSV support -->
-		<dependency>
-		    <groupId>com.databricks</groupId>
-		    <artifactId>spark-csv_2.10</artifactId>
-		    <version>1.4.0</version>
-		</dependency>
-		
-		<dependency> 
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>${fasterxml.jackson.version}</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-annotations</artifactId>
-		    <version>${fasterxml.jackson.version}</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>${fasterxml.jackson.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
-			<version>4.0</version>
-		</dependency>
-		
+			<dependency> <!-- Spark dependency -->
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-core_2.11</artifactId>
+				<version>${spark.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-sql_2.11</artifactId>
+				<version>${spark.version}</version>
+			</dependency>
+
+			<!-- for CSV support -->
+			<dependency>
+				<groupId>com.databricks</groupId>
+				<artifactId>spark-csv_2.10</artifactId>
+				<version>1.4.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${fasterxml.jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${fasterxml.jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${fasterxml.jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.0</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -199,6 +199,11 @@
 						<source>${jdk.version}</source>
 						<target>${jdk.version}</target>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
