@@ -28,7 +28,7 @@
 		<junit.version>4.12</junit.version>
 		<!-- jersey version both for client and server -->
 		<jersey2.version>2.24.1</jersey2.version>
-		<spark.version>2.1.0</spark.version>
+		<spark.version>2.2.0</spark.version>
 		<mongo.java.driver.version>3.4.2</mongo.java.driver.version>
 		<fasterxml.jackson.version>2.6.5</fasterxml.jackson.version>
 	</properties>
