@@ -30,7 +30,7 @@
 		<jersey2.version>2.25.1</jersey2.version>
 		<spark.version>2.2.0</spark.version>
 		<mongo.java.driver.version>3.4.2</mongo.java.driver.version>
-		<fasterxml.jackson.version>2.6.5</fasterxml.jackson.version>
+		<fasterxml.jackson.version>2.9.2</fasterxml.jackson.version>
 	</properties>
 
 	<distributionManagement>
@@ -162,6 +162,20 @@
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-nop</artifactId>
 					</exclusion>
+					
+		            <exclusion>
+		                <artifactId>jackson-annotations</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
+		            <exclusion>
+		                <artifactId>jackson-core</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
+		            <exclusion>
+		                <artifactId>jackson-databind</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
+        
 				</exclusions>
 			</dependency>
 			
@@ -178,6 +192,18 @@
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-nop</artifactId>
 					</exclusion>
+					<exclusion>
+		                <artifactId>jackson-annotations</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
+		            <exclusion>
+		                <artifactId>jackson-core</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
+		            <exclusion>
+		                <artifactId>jackson-databind</artifactId>
+		                <groupId>com.fasterxml.jackson.core</groupId>
+		            </exclusion>
 				</exclusions>
 			</dependency>
 
