@@ -162,20 +162,6 @@
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-nop</artifactId>
 					</exclusion>
-					
-		            <exclusion>
-		                <artifactId>jackson-annotations</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
-		            <exclusion>
-		                <artifactId>jackson-core</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
-		            <exclusion>
-		                <artifactId>jackson-databind</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
-        
 				</exclusions>
 			</dependency>
 			
@@ -192,18 +178,6 @@
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-nop</artifactId>
 					</exclusion>
-					<exclusion>
-		                <artifactId>jackson-annotations</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
-		            <exclusion>
-		                <artifactId>jackson-core</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
-		            <exclusion>
-		                <artifactId>jackson-databind</artifactId>
-		                <groupId>com.fasterxml.jackson.core</groupId>
-		            </exclusion>
 				</exclusions>
 			</dependency>
 
