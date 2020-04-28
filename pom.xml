@@ -2,17 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- The top level maven project for all RCSB projects -->
-	<!-- Mainly used for controlling dependencies and plugins in a single place. 
-		Children projects must not declare versions/configurations for dependencies 
-		that are in dependencyManagement here, or for plugins that are in pluginManagement 
-		here -->
-
-
 	<groupId>org.rcsb</groupId>
 	<artifactId>rcsb-common</artifactId>
 	<version>1.2.2-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<name>common</name>
 	<url>http://maven.apache.org</url>
@@ -20,182 +13,22 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
-
 		<jdk.version>1.8</jdk.version>
-		<maven.enforcer.jdk-version>1.8</maven.enforcer.jdk-version>
-		<slf4j.version>1.7.25</slf4j.version>
-		<log4j.version>2.6.2</log4j.version>
-		<junit.version>4.12</junit.version>
-		<spark.version>2.2.0</spark.version>
-		<mongo.java.driver.version>3.4.2</mongo.java.driver.version>
 	</properties>
 
 	<distributionManagement>
-		<downloadUrl>http://nexus.rcsb.org/nexus/content/repositories/releases/</downloadUrl>
+		<downloadUrl>http://nexus3.rcsb.org/repository/rcsb-super-proxy/</downloadUrl>
 		<repository>
 			<id>releases</id>
 			<name>RCSB PDB Maven Repository</name>
-			<url>http://nexus.rcsb.org/nexus/content/repositories/releases</url>
-
+			<url>http://nexus3.rcsb.org/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<url>http://nexus.rcsb.org/nexus/content/repositories/snapshots</url>
+			<url>http://nexus3.rcsb.org/repository/maven-snapshots/</url>
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<!-- binding for log4j 2 -->
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-slf4j-impl</artifactId>
-				<version>${log4j.version}</version>
-				<!-- runtime scope includes the test scope as well -->
-				<scope>runtime</scope>
-			</dependency>
-			<!-- Log4j API and Core implementation required for binding -->
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-api</artifactId>
-				<version>${log4j.version}</version>
-				<!-- runtime scope includes the test scope as well -->
-				<scope>runtime</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${log4j.version}</version>
-				<!-- runtime scope includes the test scope as well -->
-				<scope>runtime</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-web</artifactId>
-				<version>${log4j.version}</version>
-				<scope>runtime</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>3.1.0</version>
-			</dependency>
-
-
-
-
-
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>5.1.44</version>
-			</dependency>
-
-			<!-- Spark dependency -->
-			<dependency>
-				<groupId>org.apache.spark</groupId>
-				<artifactId>spark-core_2.11</artifactId>
-				<version>${spark.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-log4j12</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-nop</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.mongodb.spark</groupId>
-    			<artifactId>mongo-spark-connector_2.11</artifactId>
-				<version>${spark.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-log4j12</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-nop</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.spark</groupId>
-				<artifactId>spark-sql_2.11</artifactId>
-				<version>${spark.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-log4j12</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-nop</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<!--  mongo java driver -->
-			<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-			<dependency>
-			    <groupId>org.mongodb</groupId>
-			    <artifactId>mongo-java-driver</artifactId>
-			    <version>${mongo.java.driver.version}</version>
-			</dependency>
-			
-			<!-- for CSV support -->
-			<dependency>
-				<groupId>com.databricks</groupId>
-				<artifactId>spark-csv_2.11</artifactId>
-				<version>1.5.0</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-collections4</artifactId>
-				<version>4.1</version>
-			</dependency>
-
-			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-			<dependency>
-			    <groupId>commons-io</groupId>
-			    <artifactId>commons-io</artifactId>
-			    <version>2.5</version>
-			</dependency>
-
-			<!-- Xerces -->
-			<dependency>
-				<groupId>xerces</groupId>
-				<artifactId>xercesImpl</artifactId>
-				<version>2.11.0</version>
-			</dependency>
-
-			<dependency>
-				<groupId>xml-apis</groupId>
-				<artifactId>xml-apis</artifactId>
-				<version>1.4.01</version>
-			</dependency>
-
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<pluginManagement>
@@ -215,6 +48,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
 
 </project>
