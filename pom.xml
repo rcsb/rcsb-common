@@ -6,9 +6,7 @@
 	<artifactId>rcsb-common</artifactId>
 	<version>1.2.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>common</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,6 +27,11 @@
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<scm>
+		<url>https://github.com/rcsb/rcsb-common</url>
+		<connection>scm:git:git://github.com/rcsb/rcsb-common.git</connection>
+	</scm>
 
 	<build>
 		<pluginManagement>

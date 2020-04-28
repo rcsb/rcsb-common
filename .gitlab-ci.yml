@@ -1,8 +1,10 @@
 stages:
   - build
 
-build:
+deploy-job:
   stage: build
+  only:
+    - branches
   script:
 #    Handy for debugging
     - whoami
@@ -12,5 +14,4 @@ build:
 #    Build via maven
     - mvn --batch-mode --errors -U clean deploy
   tags:
-    - Java
-
+    - Java8-Nexus3
