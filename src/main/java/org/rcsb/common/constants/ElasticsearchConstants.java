@@ -42,4 +42,9 @@ public class ElasticsearchConstants {
     // this field contains an array of all text fields in unstructured manner
     public static final String COPY_TO_FIELD = "copy_all";
 
+    // this field indicates custom meta data associated with the index
+    // https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-meta-field.html
+    public static final String META = "_meta";
+    public static final String META_SCHEMA_VERSION = "schema_version";
+
 }
