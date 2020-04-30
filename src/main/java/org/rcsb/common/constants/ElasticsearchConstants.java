@@ -4,7 +4,7 @@ package org.rcsb.common.constants;
  * Created on 04/28/20.
  *
  * @author Yana Valasatava
- * @since 1.3.0
+ * @since 2.0.0
  */
 public class ElasticsearchConstants {
 
