@@ -72,6 +72,9 @@ public class MongoCollections {
 	public static final String COLL_TREE_MESH = "tree_mesh";
 	public static final String COLL_TREE_ATC = "tree_atc";
 
+	// DW METADATA
+	public static final String COLL_METADATA = "metadata";
+
 	// ASSEMBLY level collections
 	public static final String COLL_ASSEMBLY_SYMMETRY = "assembly_symmetry";
 
