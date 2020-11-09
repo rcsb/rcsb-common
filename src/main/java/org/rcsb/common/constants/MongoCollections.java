@@ -32,6 +32,7 @@ public class MongoCollections {
 	public static final String COLL_REPOSITORY_HOLDINGS_CURRENT = "repository_holdings_current_entry";
 	public static final String COLL_REPOSITORY_HOLDINGS_REMOVED = "repository_holdings_removed_entry";
 	public static final String COLL_REPOSITORY_HOLDINGS_UNRELEASED = "repository_holdings_unreleased_entry";
+	public static final String COLL_REPOSITORY_HOLDINGS_COMBINED = "repository_holdings_combined_entry";
 
 	public static final String COLL_TREE_NODE_LIST_GO = "tree_go_node_list";
 	public static final String COLL_TREE_NODE_LIST_EC = "tree_ec_node_list";
