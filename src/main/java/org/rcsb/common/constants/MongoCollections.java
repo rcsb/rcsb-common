@@ -57,6 +57,7 @@ public class MongoCollections {
 
 	public static final String COLL_UNIPROT = "core_uniprot";
 	public static final String COLL_NCBI = "core_ncbi";
+	public static final String COLL_TCGA = "core_tcga";
 	public static final String COLL_DRUGBANK = "core_drugbank";
 	public static final String COLL_PUBMED = "core_pubmed";
 	public static final String COLL_PFAM = "core_pfam";
