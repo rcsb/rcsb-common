@@ -88,6 +88,7 @@ public class MongoCollections {
 
 	//Annotations collection
 	public static final String COLL_ANNOTATIONS_UNIPROT = "annotations_uniprot";
+	public static final String COLL_ANNOTATIONS_TCGA = "annotations_tcga";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY = "annotations_polymer_entity";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY_INSTANCE = "annotations_polymer_entity_instance";
 }
