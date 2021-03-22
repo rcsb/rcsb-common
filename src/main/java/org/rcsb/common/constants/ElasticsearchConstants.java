@@ -21,6 +21,7 @@ public class ElasticsearchConstants {
     public static final String INDEX_DENORMALIZED_NON_POLYMER_ENTITY = "combined_non_polymer_entity";
     public static final String INDEX_DENORMALIZED_ASSEMBLY = "combined_assembly";
     public static final String INDEX_DENORMALIZED_POLYMER_ENTITY_INSTANCE = "combined_polymer_instance";
+    public static final String INDEX_DENORMALIZED_CHEM_COMP = "combined_chem_comp";
 
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
 
