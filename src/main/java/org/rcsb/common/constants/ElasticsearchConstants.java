@@ -16,15 +16,13 @@ public class ElasticsearchConstants {
     public static final String INDEX_SUGGESTER = "suggester";
     public static final String INDEX_TERMS_COMPLETION = "terms_autocomplete";
 
-    public static final String INDEX_FULL_TEXT_ENTRY = "full_text_entry";
-
     public static final String INDEX_DENORMALIZED_ENTRY = "combined_entry";
     public static final String INDEX_DENORMALIZED_ASSEMBLY = "combined_assembly";
     public static final String INDEX_DENORMALIZED_POLYMER_ENTITY = "combined_polymer_entity";
     public static final String INDEX_DENORMALIZED_BRANCHED_ENTITY = "combined_branched_entity";
     public static final String INDEX_DENORMALIZED_NON_POLYMER_ENTITY = "combined_non_polymer_entity";
     public static final String INDEX_DENORMALIZED_POLYMER_ENTITY_INSTANCE = "combined_polymer_instance";
-    public static final String INDEX_DENORMALIZED_CHEM_COMP = "combined_chem_comp";
+    public static final String INDEX_DENORMALIZED_MOL_DEFINITION = "combined_mol_definition";
 
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
 
