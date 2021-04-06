@@ -22,7 +22,8 @@ public class ElasticsearchConstants {
     public static final String INDEX_DENORMALIZED_BRANCHED_ENTITY = "combined_branched_entity";
     public static final String INDEX_DENORMALIZED_NON_POLYMER_ENTITY = "combined_non_polymer_entity";
     public static final String INDEX_DENORMALIZED_POLYMER_ENTITY_INSTANCE = "combined_polymer_instance";
-    public static final String INDEX_DENORMALIZED_MOL_DEFINITION = "combined_mol_definition";
+    //TODO: change to mol_definition
+    public static final String INDEX_DENORMALIZED_MOL_DEFINITION = "combined_chem_comp";
 
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
 
