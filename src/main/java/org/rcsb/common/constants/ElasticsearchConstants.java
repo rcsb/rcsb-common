@@ -25,6 +25,7 @@ public class ElasticsearchConstants {
     public static final String INDEX_DENORMALIZED_MOL_DEFINITION = "combined_mol_definition";
 
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
+    public static final String INDEX_UNSTRUCTURED_ENTRY = "unstructured_entry";
 
     // 'keyword' is an arbitrary word chosen to namespace fields indexed for exact match searches,
     // when input is not analyzed
