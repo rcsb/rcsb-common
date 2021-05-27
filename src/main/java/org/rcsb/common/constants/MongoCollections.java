@@ -90,4 +90,8 @@ public class MongoCollections {
 	public static final String COLL_ANNOTATIONS_UNIPROT = "annotations_uniprot";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY = "annotations_polymer_entity";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY_INSTANCE = "annotations_polymer_entity_instance";
+
+	//Annotations collection
+	public static final String COLL_GROUP = "core_group";
+	public static final String COLL_GROUP_PROVENANCE = "core_group_provenance";
 }
