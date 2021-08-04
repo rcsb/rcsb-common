@@ -27,6 +27,8 @@ public class ElasticsearchConstants {
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
     public static final String INDEX_UNSTRUCTURED_ENTRY = "unstructured_entry";
 
+    public static final String INDEX_GROUP_UNIPROT_ENTITY = "group_uniprot_entity";
+
     // 'keyword' is an arbitrary word chosen to namespace fields indexed for exact match searches,
     // when input is not analyzed
     public static final String KEYWORD_SUFFIX = "keyword";
