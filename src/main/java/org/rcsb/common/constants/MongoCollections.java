@@ -40,6 +40,8 @@ public class MongoCollections {
 	public static final String COLL_TREE_NODE_LIST_CATH = "tree_cath_node_list";
 	public static final String COLL_TREE_NODE_LIST_SCOP = "tree_scop_node_list";
 	public static final String COLL_TREE_NODE_LIST_TAXONOMY = "tree_taxonomy_node_list";
+	public static final String COLL_TREE_NODE_LIST_ECOD = "tree_ecod_node_list";
+	public static final String COLL_TREE_NODE_LIST_SCOP2 = "tree_scop2_node_list";
 
 	// DW CORE COLLECTIONS
 	public static final String COLL_ASSEMBLY = "core_assembly";
@@ -73,6 +75,8 @@ public class MongoCollections {
 	public static final String COLL_TREE_GENOMIC = "tree_genomic";
 	public static final String COLL_TREE_MESH = "tree_mesh";
 	public static final String COLL_TREE_ATC = "tree_atc";
+	public static final String COLL_TREE_ECOD = "tree_ecod";
+	public static final String COLL_TREE_SCOP2 = "tree_scop2";
 
 	// DW METADATA
 	public static final String COLL_METADATA = "metadata";
