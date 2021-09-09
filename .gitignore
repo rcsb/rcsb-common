@@ -13,6 +13,7 @@ hs_err_pid*
 
 # No IntelliJ files should be in git
 .idea
+*.iml
 
 # no eclipse files
 .project
