@@ -29,6 +29,7 @@ public class MongoCollections {
 
 	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_ENTITY_MEMBERS = "entity_members";
 	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_CLUSTER_MEMBERS = "cluster_members";
+	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_PROVENANCE = "cluster_provenance";
 
 	public static final String COLL_REPOSITORY_HOLDINGS_CURRENT = "repository_holdings_current_entry";
 	public static final String COLL_REPOSITORY_HOLDINGS_REMOVED = "repository_holdings_removed_entry";
