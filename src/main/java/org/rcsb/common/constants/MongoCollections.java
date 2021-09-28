@@ -45,6 +45,7 @@ public class MongoCollections {
 
 	// DW CORE COLLECTIONS
 	public static final String COLL_ASSEMBLY = "core_assembly";
+	public static final String COLL_INTERFACE = "core_interface";
 	public static final String COLL_ENTRY = "core_entry";
 
 	public static final String COLL_POLYMER_ENTITY = "core_polymer_entity";
