@@ -101,5 +101,5 @@ public class MongoCollections {
 	public static final String COLL_GROUP_PROVENANCE = "group_provenance";
 	public static final String COLL_GROUP_POLYMER_ENTITY_UNIPROT_ACCESSION = "group_polymer_entity_uniprot_accession";
 	public static final String COLL_GROUP_POLYMER_ENTITY_SEQUENCE_IDENTITY = "group_polymer_entity_sequence_identity";
-	public static final String COLL_GROUP_ENTRY_DEPOSITION_GROUP = "group_entry_deposition_group";
+	public static final String COLL_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
 }
