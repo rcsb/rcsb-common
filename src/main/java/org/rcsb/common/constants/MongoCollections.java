@@ -27,7 +27,9 @@ public class MongoCollections {
 
 	public static final String COLL_PDBX_CORE_ASSEMBLY = "pdbx_core_assembly";
 
-	public static final String COLL_PDBX_ENTITY_SEQUENCE_CLUSTERS = "entity_members";
+	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_ENTITY_MEMBERS = "entity_members";
+	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_CLUSTER_MEMBERS = "cluster_members";
+	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_PROVENANCE = "cluster_provenance";
 
 	public static final String COLL_REPOSITORY_HOLDINGS_CURRENT = "repository_holdings_current_entry";
 	public static final String COLL_REPOSITORY_HOLDINGS_REMOVED = "repository_holdings_removed_entry";
@@ -91,9 +93,15 @@ public class MongoCollections {
 
 	public static final String COLL_SHAPE_DESCRIPTOR = "shape_descriptor";
 
-	//Annotations collection
+	// Annotations collection
 	public static final String COLL_ANNOTATIONS_UNIPROT = "annotations_uniprot";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY = "annotations_polymer_entity";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY_INSTANCE = "annotations_polymer_entity_instance";
 	public static final String COLL_ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE = "annotations_interface_polymer_entity_instance";
+
+	// Groups collection
+	public static final String COLL_GROUP_PROVENANCE = "group_provenance";
+	public static final String COLL_GROUP_POLYMER_ENTITY_UNIPROT_ACCESSION = "group_polymer_entity_uniprot_accession";
+	public static final String COLL_GROUP_POLYMER_ENTITY_SEQUENCE_IDENTITY = "group_polymer_entity_sequence_identity";
+	public static final String COLL_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
 }
