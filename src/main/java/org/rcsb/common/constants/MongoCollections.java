@@ -52,6 +52,12 @@ public class MongoCollections {
 	public static final String COLL_TREE_NODE_LIST_SCOP2 = "tree_scop2_node_list";
 
 	// DW CORE COLLECTIONS
+
+	public static final String COLL_COMP_MODEL_ENTRY = "core_comp_model_entry";
+	public static final String COLL_COMP_MODEL_ASSEMBLY = "core_comp_model_assembly";
+	public static final String COLL_COMP_MODEL_POLYMER_ENTITY = "core_comp_model_polymer_entity";
+	public static final String COLL_COMP_MODEL_POLYMER_ENTITY_INSTANCE = "core_comp_model_polymer_entity_instance";
+
 	public static final String COLL_ASSEMBLY = "core_assembly";
 	public static final String COLL_ENTRY = "core_entry";
 
