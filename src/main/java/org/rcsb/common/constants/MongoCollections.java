@@ -12,6 +12,12 @@ public class MongoCollections {
 	// this collection of static members cannot be instantiated.
 	private MongoCollections() {}
 
+	// EXCHANGE DB COMPUTED MODELS COLLECTIONS
+	public static final String COLL_PDBX_COMP_MODEL_CORE_ENTRY = "pdbx_comp_model_core_entry";
+	public static final String COLL_PDBX_COMP_MODEL_CORE_ASSEMBLY = "pdbx_comp_model_core_assembly";
+	public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY = "pdbx_comp_model_core_polymer_entity";
+	public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY_INSTANCE = "pdbx_comp_model_core_polymer_entity_instance";
+
 	// EXCHANGE DB COLLECTIONS
 	public static final String COLL_PDBX_CORE_BIRD_CHEM_COMP = "bird_chem_comp_core";
 	public static final String COLL_PDBX_CORE_DRUGBANK = "drugbank_core";
