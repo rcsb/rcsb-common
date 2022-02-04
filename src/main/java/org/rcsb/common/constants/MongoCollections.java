@@ -47,6 +47,7 @@ public class MongoCollections {
 
 	// DW CORE COLLECTIONS
 	public static final String COLL_ASSEMBLY = "core_assembly";
+	public static final String COLL_INTERFACE = "core_interface";
 	public static final String COLL_ENTRY = "core_entry";
 
 	public static final String COLL_POLYMER_ENTITY = "core_polymer_entity";
@@ -90,12 +91,16 @@ public class MongoCollections {
 	public static final String COLL_ENTITY_FEATURES_CALCULATED_HYDROPATHY = "entity_features_calculated_hydropathy";
 	public static final String COLL_ENTITY_FEATURES_CALCULATED_DISORDER = "entity_features_calculated_disorder";
 
+	// POLYMER INSTANCE level collections (RCSB derived properties)
+	public static final String COLL_POLYMER_INSTANCE_ASA = "polymer_instance_features_calculated_asa";
+
 	public static final String COLL_SHAPE_DESCRIPTOR = "shape_descriptor";
 
 	// Annotations collection
 	public static final String COLL_ANNOTATIONS_UNIPROT = "annotations_uniprot";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY = "annotations_polymer_entity";
 	public static final String COLL_ANNOTATIONS_POLYMER_ENTITY_INSTANCE = "annotations_polymer_entity_instance";
+	public static final String COLL_ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE = "annotations_interface_polymer_entity_instance";
 
 	// Groups collection
 	public static final String COLL_GROUP_PROVENANCE = "group_provenance";
