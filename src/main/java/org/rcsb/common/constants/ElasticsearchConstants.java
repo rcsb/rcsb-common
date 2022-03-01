@@ -27,6 +27,7 @@ public class ElasticsearchConstants {
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
     public static final String INDEX_UNSTRUCTURED_ENTRY = "unstructured_entry";
 
+    public static final String INDEX_DENORMALIZED_GROUP = "combined_group";
     public static final String INDEX_GROUP_POLYMER_ENTITY_UNIPROT_ACCESSION = "group_polymer_entity_uniprot_accession";
     public static final String INDEX_GROUP_POLYMER_ENTITY_SEQUENCE_IDENTITY = "group_polymer_entity_sequence_identity";
     public static final String INDEX_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
