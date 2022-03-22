@@ -13,5 +13,5 @@ package org.rcsb.common.constants;
  */
 public enum ContentType {
     experimental,
-    computed
+    computational
 }
