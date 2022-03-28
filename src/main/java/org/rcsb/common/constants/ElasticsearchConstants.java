@@ -27,9 +27,7 @@ public class ElasticsearchConstants {
     public static final String INDEX_UNRELEASED_ENTRY = "unreleased_entry";
     public static final String INDEX_UNSTRUCTURED_ENTRY = "unstructured_entry";
 
-    public static final String INDEX_GROUP_POLYMER_ENTITY_UNIPROT_ACCESSION = "group_polymer_entity_uniprot_accession";
-    public static final String INDEX_GROUP_POLYMER_ENTITY_SEQUENCE_IDENTITY = "group_polymer_entity_sequence_identity";
-    public static final String INDEX_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
+    public static final String INDEX_DENORMALIZED_GROUPS = "combined_groups";
 
     // 'keyword' is an arbitrary word chosen to namespace fields indexed for exact match searches,
     // when input is not analyzed
@@ -49,7 +47,7 @@ public class ElasticsearchConstants {
     // this field contains an array of all text fields in unstructured manner
     public static final String COPY_TO_FIELD = "copy_all";
 
-    // this field indicates custom meta data associated with the index
+    // this field indicates custom metadata associated with the index
     // https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-meta-field.html
     public static final String META = "_meta";
     public static final String META_SCHEMA_VERSION = "schema_version";
