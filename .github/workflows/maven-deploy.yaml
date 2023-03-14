@@ -6,3 +6,6 @@ on:
 jobs:
   maven-deploy:
     uses: rcsb/devops-cicd-github-actions/.github/workflows/maven-deploy.yaml@dev-jh-mavendeploy
+    with:
+      distribution: 'rcsb-common'
+
