@@ -85,6 +85,7 @@ public class MongoCollections {
 	public static final String COLL_TREE_MEMBRANE = "tree_membrane";
 	public static final String COLL_TREE_OPM = "tree_opm";
 	public static final String COLL_TREE_GO = "tree_go";
+	public static final String COLL_TREE_INTERPRO = "tree_interpro";
 	public static final String COLL_TREE_CATH = "tree_cath";
 	public static final String COLL_TREE_SCOP = "tree_scop";
 	public static final String COLL_TREE_TAXONOMY = "tree_taxonomy";
