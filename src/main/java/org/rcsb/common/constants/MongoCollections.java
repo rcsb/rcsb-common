@@ -95,6 +95,7 @@ public class MongoCollections {
 	public static final String COLL_TREE_ECOD = "tree_ecod";
 	public static final String COLL_TREE_SCOP2 = "tree_scop2";
 	public static final String COLL_TREE_CARD = "tree_card";
+	public static final String COLL_TREE_MONDO = "tree_mondo";
 
 	// DW METADATA
 	public static final String COLL_METADATA = "metadata";
