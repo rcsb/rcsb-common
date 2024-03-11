@@ -126,6 +126,12 @@ public class MongoCollections {
 	public static final String COLL_SEQUENCE_COORDINATES_UNIPROT_TO_PDB_ENTITY_ALIGNMENTS = "uniprot_to_pdb_entity_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_NCBI_TO_UNIPROT_ALIGNMENTS = "ncbi_to_uniprot_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_NCBI_TO_PDB_ENTITY_ALIGNMENTS = "ncbi_to_pdb_entity_alignments";
+	public static final String COLL_SEQUENCE_COORDINATES_NCBI_GENOME_TO_PROTEIN_ALIGNMENTS = "ncbi_genome_to_protein_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_SEQUENCE_IDENTITY_GROUP_ALIGNMENTS = "sequence_identity_group_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_SEQUENCES = "sequences";
+	public static final String COLL_SEQUENCE_COORDINATES_PDB_ENTITY_ANNOTATIONS = "pdb_entity_annotations";
+	public static final String COLL_SEQUENCE_COORDINATES_PDB_INSTANCE_ANNOTATIONS = "pdb_instance_annotations";
+	public static final String COLL_SEQUENCE_COORDINATES_PDB_INTERFACE_ANNOTATIONS = "pdb_interface_annotations";
+	public static final String COLL_SEQUENCE_COORDINATES_UNIPROT_ANNOTATIONS = "uniprot_annotations";
+	public static final String COLL_SEQUENCE_COORDINATES_PDB_INSTANCE_MAP = "pdb_instance_map";
 }
