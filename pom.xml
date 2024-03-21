@@ -48,6 +48,12 @@
 			<organization>RCSB PDB</organization>
 			<organizationUrl>https://www.rcsb.org</organizationUrl>
 		</developer>
+		<developer>
+			<name>Joan Segura</name>
+			<email>joan.segura@rcsb.org</email>
+			<organization>RCSB PDB</organization>
+			<organizationUrl>https://www.rcsb.org</organizationUrl>
+		</developer>
 	</developers>
 
 	<scm>
