@@ -122,6 +122,7 @@ public class MongoCollections {
 	public static final String COLL_GROUP_PROVENANCE = "group_provenance";
 	public static final String COLL_GROUP_POLYMER_ENTITY_UNIPROT_ACCESSION = "group_polymer_entity_uniprot_accession";
 	public static final String COLL_GROUP_POLYMER_ENTITY_SEQUENCE_IDENTITY = "group_polymer_entity_sequence_identity";
+	public static final String COLL_GROUP_NON_POLYMER_ENTITY_CHEMICAL_COMPONENT = "group_non_polymer_entity_chemical_component";
 	public static final String COLL_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
 	public static final String COLL_SEQUENCE_COORDINATES_UNIPROT_TO_PDB_ENTITY_ALIGNMENTS = "uniprot_to_pdb_entity_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_NCBI_TO_UNIPROT_ALIGNMENTS = "ncbi_to_uniprot_alignments";
