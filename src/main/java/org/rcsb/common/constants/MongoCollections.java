@@ -135,4 +135,7 @@ public class MongoCollections {
 	public static final String COLL_SEQUENCE_COORDINATES_PDB_INTERFACE_ANNOTATIONS = "pdb_interface_annotations";
 	public static final String COLL_SEQUENCE_COORDINATES_UNIPROT_ANNOTATIONS = "uniprot_annotations";
 	public static final String COLL_SEQUENCE_COORDINATES_PDB_INSTANCE_MAP = "pdb_instance_map";
+
+	public static final String COLL_EMBEDDING_INSTANCE = "embedding_entity_instance";
+	public static final String COLL_EMBEDDING_ASSEMBLY = "embedding_assembly";
 }
