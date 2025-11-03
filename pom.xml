@@ -65,7 +65,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
-		<jdk.version>11</jdk.version>
+		<jdk.version>17</jdk.version>
 	</properties>
 
 	<build>
