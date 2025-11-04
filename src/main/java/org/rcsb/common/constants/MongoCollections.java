@@ -12,26 +12,9 @@ public class MongoCollections {
 	// this collection of static members cannot be instantiated.
 	private MongoCollections() {}
 
-	// EXCHANGE DB COMPUTED MODELS COLLECTIONS
-	public static final String COLL_PDBX_COMP_MODEL_CORE_ENTRY = "pdbx_comp_model_core_entry";
-	public static final String COLL_PDBX_COMP_MODEL_CORE_ASSEMBLY = "pdbx_comp_model_core_assembly";
-	public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY = "pdbx_comp_model_core_polymer_entity";
-	public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY_INSTANCE = "pdbx_comp_model_core_polymer_entity_instance";
-
 	// EXCHANGE DB COLLECTIONS
 	public static final String COLL_PDBX_CORE_BIRD_CHEM_COMP = "bird_chem_comp_core";
 	public static final String COLL_PDBX_CORE_DRUGBANK = "drugbank_core";
-	public static final String COLL_PDBX_CORE_ENTRY = "pdbx_core_entry";
-
-	public static final String COLL_PDBX_CORE_POLYMER_ENTITY = "pdbx_core_polymer_entity";
-	public static final String COLL_PDBX_CORE_NONPOLYMER_ENTITY = "pdbx_core_nonpolymer_entity";
-	public static final String COLL_PDBX_CORE_BRANCHED_ENTITY = "pdbx_core_branched_entity";
-
-	public static final String COLL_PDBX_CORE_POLYMER_ENTITY_INSTANCE = "pdbx_core_polymer_entity_instance";
-	public static final String COLL_PDBX_CORE_NONPOLYMER_ENTITY_INSTANCE = "pdbx_core_nonpolymer_entity_instance";
-	public static final String COLL_PDBX_CORE_BRANCHED_ENTITY_INSTANCE = "pdbx_core_branched_entity_instance";
-
-	public static final String COLL_PDBX_CORE_ASSEMBLY = "pdbx_core_assembly";
 
 	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_ENTITY_MEMBERS = "entity_members";
 	public static final String COLL_PDBX_SEQUENCE_CLUSTERS_CLUSTER_MEMBERS = "cluster_members";
@@ -52,24 +35,38 @@ public class MongoCollections {
 	public static final String COLL_TREE_NODE_LIST_SCOP2 = "tree_scop2_node_list";
 	public static final String COLL_TREE_NODE_LIST_CARD = "tree_card_node_list";
 
-	// DW CORE COLLECTIONS
+    // CORE PDB COLLECTIONS
+    public static final String COLL_PDBX_CORE_ENTRY = "pdbx_core_entry";
+    public static final String COLL_PDBX_CORE_ASSEMBLY = "pdbx_core_assembly";
+    public static final String COLL_PDBX_CORE_POLYMER_ENTITY = "pdbx_core_polymer_entity";
+    public static final String COLL_PDBX_CORE_NONPOLYMER_ENTITY = "pdbx_core_nonpolymer_entity";
+    public static final String COLL_PDBX_CORE_BRANCHED_ENTITY = "pdbx_core_branched_entity";
+    public static final String COLL_PDBX_CORE_POLYMER_ENTITY_INSTANCE = "pdbx_core_polymer_entity_instance";
+    public static final String COLL_PDBX_CORE_NONPOLYMER_ENTITY_INSTANCE = "pdbx_core_nonpolymer_entity_instance";
+    public static final String COLL_PDBX_CORE_BRANCHED_ENTITY_INSTANCE = "pdbx_core_branched_entity_instance";
 
-	public static final String COLL_COMP_MODEL_ENTRY = "core_comp_model_entry";
-	public static final String COLL_COMP_MODEL_ASSEMBLY = "core_comp_model_assembly";
-	public static final String COLL_COMP_MODEL_POLYMER_ENTITY = "core_comp_model_polymer_entity";
-	public static final String COLL_COMP_MODEL_POLYMER_ENTITY_INSTANCE = "core_comp_model_polymer_entity_instance";
+    // CORE CSM COLLECTIONS
+    public static final String COLL_PDBX_COMP_MODEL_CORE_ENTRY = "pdbx_comp_model_core_entry";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_ASSEMBLY = "pdbx_comp_model_core_assembly";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY = "pdbx_comp_model_core_polymer_entity";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_NONPOLYMER_ENTITY = "pdbx_comp_model_core_nonpolymer_entity";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_BRANCHED_ENTITY = "pdbx_comp_model_core_branched_entity";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_POLYMER_ENTITY_INSTANCE = "pdbx_comp_model_core_polymer_entity_instance";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_NONPOLYMER_ENTITY_INSTANCE = "pdbx_comp_model_core_nonpolymer_entity_instance";
+    public static final String COLL_PDBX_COMP_MODEL_CORE_BRANCHED_ENTITY_INSTANCE = "pdbx_comp_model_core_branched_entity_instance";
 
+
+    // DW CORE COLLECTIONS
+    public static final String COLL_ENTRY = "core_entry";
 	public static final String COLL_ASSEMBLY = "core_assembly";
-	public static final String COLL_INTERFACE = "core_interface";
-	public static final String COLL_ENTRY = "core_entry";
-
 	public static final String COLL_POLYMER_ENTITY = "core_polymer_entity";
 	public static final String COLL_NONPOLYMER_ENTITY = "core_nonpolymer_entity";
 	public static final String COLL_BRANCHED_ENTITY = "core_branched_entity";
-
 	public static final String COLL_POLYMER_ENTITY_INSTANCE = "core_polymer_entity_instance";
 	public static final String COLL_NONPOLYMER_ENTITY_INSTANCE = "core_nonpolymer_entity_instance";
 	public static final String COLL_BRANCHED_ENTITY_INSTANCE = "core_branched_entity_instance";
+
+    public static final String COLL_INTERFACE = "core_interface";
 
 	public static final String COLL_CHEM_COMP = "core_chem_comp";
 
