@@ -98,14 +98,16 @@ public class MongoCollections {
 	public static final String COLL_METADATA = "metadata";
 
 	// ASSEMBLY level collections
-	public static final String COLL_ASSEMBLY_SYMMETRY = "assembly_symmetry";
+	public static final String COLL_ASSEMBLY_SYMMETRY_PDB = "pdbx_assembly_symmetry";
+    public static final String COLL_ASSEMBLY_SYMMETRY_CSM = "pdbx_comp_model_assembly_symmetry";
 
 	// ENTITY level collections (RCSB derived properties)
 	public static final String COLL_ENTITY_FEATURES_CALCULATED_HYDROPATHY = "entity_features_calculated_hydropathy";
 	public static final String COLL_ENTITY_FEATURES_CALCULATED_DISORDER = "entity_features_calculated_disorder";
 
 	// POLYMER INSTANCE level collections (RCSB derived properties)
-	public static final String COLL_POLYMER_INSTANCE_ASA = "polymer_instance_features_calculated_asa";
+	public static final String COLL_POLYMER_INSTANCE_ASA_PDB = "pdbx_polymer_instance_features_calculated_asa";
+    public static final String COLL_POLYMER_INSTANCE_ASA_CSM = "pdbx_comp_model_polymer_instance_features_calculated_asa";
 
 	public static final String COLL_SHAPE_DESCRIPTOR = "shape_descriptor";
 
