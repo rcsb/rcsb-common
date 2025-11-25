@@ -66,7 +66,8 @@ public class MongoCollections {
 	public static final String COLL_NONPOLYMER_ENTITY_INSTANCE = "core_nonpolymer_entity_instance";
 	public static final String COLL_BRANCHED_ENTITY_INSTANCE = "core_branched_entity_instance";
 
-    public static final String COLL_INTERFACE = "core_interface";
+    public static final String COLL_INTERFACE_PDB = "pdbx_core_interface";
+    public static final String COLL_INTERFACE_CSM = "pdbx_comp_model_core_interface";
 
 	public static final String COLL_CHEM_COMP = "core_chem_comp";
 
