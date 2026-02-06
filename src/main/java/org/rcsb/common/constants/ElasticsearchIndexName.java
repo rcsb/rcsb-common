@@ -27,6 +27,8 @@ public enum ElasticsearchIndexName {
     /** Represents the index for combined polymer entity component models. */
     denormalized_polymer_entity("combined_polymer_entity_pdb", "combined_polymer_entity_csm", "combined_polymer_entity_all"),
 
+    denormalized_polymer_entity_instance("combined_polymer_entity_instance_pdb", "combined_polymer_entity_instance_csm", "combined_polymer_entity_instance_all"),
+
     /** Represents the index for combined branched entity models. */
     denormalized_branched_entity("combined_branched_entity_pdb", "combined_branched_entity_csm", "combined_branched_entity_all"),
 
