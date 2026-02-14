@@ -12,9 +12,10 @@ public class IdentifierRegexTest {
     }
 
     @Test
-    public void matchesFourCharacterPdbIdWithValidSuffix() {
-        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2").matches());
-        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1").matches());
-        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A").matches());
+    public void matchesFourCharacterPdbIdOptionallyWithValidSuffix() {
+        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc").matches());
+        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2").matches());
+        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1").matches());
+        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A").matches());
     }
 }
