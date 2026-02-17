@@ -1,21 +1,31 @@
 package org.rcsb.common.constants;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import java.util.stream.Stream;
 
-public class IdentifierRegexTest {
+class IdentifierRegexTest {
 
     @Test
-    public void matchesFourCharacterPdbId() {
+    void matchesPdbId() {
         assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1abc").matches());
     }
 
-    @Test
-    public void matchesFourCharacterPdbIdOptionallyWithValidSuffix() {
-        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc").matches());
-        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2").matches());
-        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1").matches());
-        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher("1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A").matches());
+    @ParameterizedTest(name = "matches PDB ID with optional suffix: {0}")
+    @MethodSource("validPdbIdsWithOptionalSuffixes")
+    void matchesPdbIdOptionallyWithValidSuffix(String pdbId) {
+        assertTrue(IdentifierRegex.PDB_ID_WITH_SUFFIX_REGEX.matcher(pdbId).matches());
+    }
+
+    private static Stream<String> validPdbIdsWithOptionalSuffixes() {
+        return Stream.of(
+                "1abc",
+                "1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2",
+                "1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1",
+                "1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A"
+        );
     }
 }
