@@ -7,7 +7,7 @@ public class IdentifierRegex {
     public static final Pattern PDB_ID_REGEX = Pattern.compile("^\\d\\w\\w\\w$");
 
     private static final String PDB_ID_WITH_SUFFIX_REGEX_VALUE = String.format(
-            "^\\d\\w\\w\\w(?:%s\\w+|%s\\w+|%s\\w+)$",
+            "^\\d\\w\\w\\w(?:%s\\w+|%s\\w+|%s\\w+)?$",
             Pattern.quote(IdentifierSeparator.ENTITY_SEPARATOR),
             Pattern.quote(IdentifierSeparator.ASSEMBLY_SEPARATOR),
             Pattern.quote(IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR));
