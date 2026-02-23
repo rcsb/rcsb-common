@@ -25,7 +25,8 @@ class IdentifierRegexTest {
                 "1abc",
                 "1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2",
                 "1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1",
-                "1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A"
+                "1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A",
+                "1abc-1" + IdentifierSeparator.INTERFACE_SEPARATOR + "1"
         );
     }
 }
