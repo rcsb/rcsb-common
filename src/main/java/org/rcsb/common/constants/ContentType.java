@@ -6,10 +6,9 @@ package org.rcsb.common.constants;
  * models.
  *
  * Created on 3/17/22.
- * TODO: fix @since tag
  *
  * @author Yana Rose
- * @since X.Y.Z
+ * @since 2.6.0
  */
 public enum ContentType {
     experimental,
