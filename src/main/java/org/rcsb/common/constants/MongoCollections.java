@@ -126,6 +126,7 @@ public class MongoCollections {
 	public static final String COLL_GROUP_ENTRY_DEPOSIT_GROUP = "group_entry_deposit_group";
 
 	// new group membership collections
+	public static final String COLL_GROUP_METADATA = "group_metadata";
 	public static final String COLL_GROUP_MEMBERSHIP_ENTRY = "group_membership_entry";
 	public static final String COLL_GROUP_MEMBERSHIP_POL_ENT = "group_membership_pol_ent";
 	public static final String COLL_GROUP_MEMBERSHIP_NON_POL_ENT = "group_membership_non_pol_ent";
