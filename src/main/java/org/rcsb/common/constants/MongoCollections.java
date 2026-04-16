@@ -128,8 +128,8 @@ public class MongoCollections {
 	// new group membership collections
 	public static final String COLL_GROUP_METADATA = "group_metadata";
 	public static final String COLL_GROUP_MEMBERSHIP_ENTRY = "group_membership_entry";
-	public static final String COLL_GROUP_MEMBERSHIP_POL_ENT = "group_membership_pol_ent";
-	public static final String COLL_GROUP_MEMBERSHIP_NON_POL_ENT = "group_membership_non_pol_ent";
+	public static final String COLL_GROUP_MEMBERSHIP_POL_ENT = "group_membership_polymer_entity";
+	public static final String COLL_GROUP_MEMBERSHIP_NON_POL_ENT = "group_membership_non_polymer_entity";
 
 	public static final String COLL_SEQUENCE_COORDINATES_UNIPROT_TO_PDB_ENTITY_ALIGNMENTS = "uniprot_to_pdb_entity_alignments";
 	public static final String COLL_SEQUENCE_COORDINATES_NCBI_TO_UNIPROT_ALIGNMENTS = "ncbi_to_uniprot_alignments";
