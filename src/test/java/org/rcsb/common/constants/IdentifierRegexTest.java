@@ -12,6 +12,9 @@ class IdentifierRegexTest {
     @Test
     void matchesPdbId() {
         assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1abc").matches());
+        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("1ABC").matches());
+        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("pdb_00001abc").matches());
+        assertTrue(IdentifierRegex.PDB_ID_REGEX.matcher("PDB_00001ABC").matches());
     }
 
     @ParameterizedTest(name = "matches PDB ID with optional suffix: {0}")
@@ -26,7 +29,11 @@ class IdentifierRegexTest {
                 "1abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2",
                 "1abc" + IdentifierSeparator.ASSEMBLY_SEPARATOR + "1",
                 "1abc" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "A",
-                "1abc-1" + IdentifierSeparator.INTERFACE_SEPARATOR + "1"
+                "1abc-1" + IdentifierSeparator.INTERFACE_SEPARATOR + "1",
+                "pdb_00001abc",
+                "PDB_00001ABC",
+                "pdb_00001abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2",
+                "PDB_00001ABC-1" + IdentifierSeparator.INTERFACE_SEPARATOR + "1"
         );
     }
 }
