@@ -141,4 +141,6 @@ public class MongoCollections {
 
 	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_INSTANCE = "pdbx_comp_model_embedding_entity_instance";
 	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_ASSEMBLY = "pdbx_comp_model_embedding_assembly";
+	public static final String COLL_PDBX_EMBEDDING_POLYMER_ENTITY = "pdbx_embedding_polymer_entity";
+	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_POLYMER_ENTITY = "pdbx_comp_model_embedding_polymer_entity";
 }
