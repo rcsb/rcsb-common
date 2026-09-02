@@ -3,6 +3,8 @@ package org.rcsb.common.constants;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.NullSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -114,5 +116,39 @@ class IdentifierRegexTest {
                 "1abc-1" + IdentifierSeparator.INTERFACE_SEPARATOR + "1",
                 "1ABC" + IdentifierSeparator.ENTITY_INSTANCE_SEPARATOR + "AA"
         );
+    }
+
+    @ParameterizedTest(name = "isLegacyPdbId({0})")
+    @MethodSource("validPdbIds")
+    void isLegacyPdbIdTrueForLegacyIds(String id) {
+        assertTrue(IdentifierRegex.isLegacyPdbId(id));
+        assertTrue(IdentifierRegex.isAnyPdbId(id));
+        assertFalse(IdentifierRegex.isExtPdbId(id));
+    }
+
+    @ParameterizedTest(name = "isExtPdbId({0})")
+    @ValueSource(strings = {"pdb_00001abc", "pdb_12345678", "pdb_abcdefgh"})
+    void isExtPdbIdTrueForExtendedIds(String id) {
+        assertTrue(IdentifierRegex.isExtPdbId(id));
+        assertTrue(IdentifierRegex.isAnyPdbId(id));
+        assertFalse(IdentifierRegex.isLegacyPdbId(id));
+    }
+
+    @ParameterizedTest(name = "no flavour matches: {0}")
+    @NullSource
+    @ValueSource(strings = {
+            "",
+            "1ab",
+            "1abcd",
+            "PDB_00001ABC",
+            "pdb_00001AbC",
+            "pdb_00001ab",
+            "1abc" + "_" + "2",
+            "pdb_00001abc" + "_" + "2"
+    })
+    void noFlavourMatchesInvalidOrSuffixedIds(String id) {
+        assertFalse(IdentifierRegex.isLegacyPdbId(id));
+        assertFalse(IdentifierRegex.isExtPdbId(id));
+        assertFalse(IdentifierRegex.isAnyPdbId(id));
     }
 }
