@@ -150,5 +150,5 @@ public class MongoCollections {
 	public static final String COLL_PDBX_EMBEDDING_SEQUENCE = "pdbx_embedding_sequence";
 	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_SEQUENCE = "pdbx_comp_model_embedding_sequence";
 	public static final String COLL_PDBX_EMBEDDING_ENTITY_TO_SEQUENCE = "pdbx_embedding_entity_to_sequence";
-	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_ENTITY_TO_SEQUENCE = "pdbx_comp_model_embedding_to_sequence";
+	public static final String COLL_PDBX_COMP_MODEL_EMBEDDING_ENTITY_TO_SEQUENCE = "pdbx_comp_model_embedding_entity_to_sequence";
 }
