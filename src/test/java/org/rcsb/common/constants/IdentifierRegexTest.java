@@ -1,6 +1,7 @@
 package org.rcsb.common.constants;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullSource;
@@ -131,6 +132,29 @@ class IdentifierRegexTest {
         assertTrue(IdentifierRegex.isExtPdbId(id));
         assertTrue(IdentifierRegex.isAnyPdbId(id));
         assertFalse(IdentifierRegex.isLegacyPdbId(id));
+    }
+
+    @ParameterizedTest(name = "identifyFlavor() returns {1} for {0}")
+    @MethodSource("validIdsWithFlavor")
+    void identifyFlavorReturnsExpectedFlavorForValidIds(String id, PdbIdFlavor expectedFlavor) {
+        assertEquals(expectedFlavor, IdentifierRegex.identifyFlavor(id));
+    }
+
+    private static Stream<Arguments> validIdsWithFlavor() {
+        return Stream.of(
+                Arguments.of("1abc", PdbIdFlavor.LEGACY),
+                Arguments.of("1ABC", PdbIdFlavor.LEGACY),
+                Arguments.of("pdb_00001abc", PdbIdFlavor.EXTENDED),
+                Arguments.of("PDB_00001ABC", PdbIdFlavor.EXTENDED),
+                Arguments.of("pdb_00001AbC", PdbIdFlavor.EXTENDED)
+        );
+    }
+
+    @ParameterizedTest(name = "identifyFlavor() throws for {0}")
+    @NullSource
+    @ValueSource(strings = {"", "invalid", "pdb_00001abc" + IdentifierSeparator.ENTITY_SEPARATOR + "2"})
+    void identifyFlavorThrowsForNullOrInvalidValues(String id) {
+        assertThrows(IllegalArgumentException.class, () -> IdentifierRegex.identifyFlavor(id));
     }
 
     @ParameterizedTest(name = "no flavour matches: {0}")

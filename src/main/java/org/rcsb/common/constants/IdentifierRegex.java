@@ -1,5 +1,6 @@
 package org.rcsb.common.constants;
 
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 /**
@@ -82,6 +83,28 @@ public class IdentifierRegex {
      */
     public static boolean isAnyPdbId(String id) {
         return isLegacyPdbId(id) || isExtPdbId(id);
+    }
+
+    /**
+     * Identifies the identifier flavour from the input.
+     *
+     * <p>Extended identifiers are recognized case-insensitively.
+     *
+     * @param pdbId the input identifier
+     * @return {@link PdbIdFlavor#EXTENDED} for extended IDs; {@link PdbIdFlavor#LEGACY} for legacy IDs
+     * @throws IllegalArgumentException if {@code pdbId} is null or not a valid legacy/extended PDB id
+     */
+    public static PdbIdFlavor identifyFlavor(String pdbId) {
+        if (pdbId == null) {
+            throw new IllegalArgumentException("Invalid PDB ID: null");
+        }
+
+        String id = pdbId.toLowerCase(Locale.ROOT);
+
+        if (IdentifierRegex.isLegacyPdbId(id)) return PdbIdFlavor.LEGACY;
+        if (IdentifierRegex.isExtPdbId(id))    return PdbIdFlavor.EXTENDED;
+
+        throw new IllegalArgumentException("Invalid PDB ID: " + pdbId);
     }
 
     /**
