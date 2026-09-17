@@ -17,6 +17,9 @@ public class IdentifierRegex {
 
     private static final String EXT_PDB_ID_REGEX_VALUE = "pdb_[a-z0-9]{8}";
 
+    // this prefix supports transition periods when both legacy and extended IDs must be handled.
+    private static final String EXTENDED_PREFIX = "pdb_0000";
+
     private static final String SUFFIX_REGEX_VALUE = String.format(
             "(?:%1$s%5$s+(?:%2$s%5$s+)?|%3$s%5$s+|%4$s%5$s+)?",
             Pattern.quote(IdentifierSeparator.ASSEMBLY_SEPARATOR),
@@ -79,5 +82,27 @@ public class IdentifierRegex {
      */
     public static boolean isAnyPdbId(String id) {
         return isLegacyPdbId(id) || isExtPdbId(id);
+    }
+
+    /**
+     * Converts a PDB ID from an external source to the desired identifier flavor targetFlavor
+     * @param externalId the PDB ID received from an external resource
+     * @param targetFlavor the backend flavor to convert to
+     * @return the normalized ID of the database identifier flavor
+     */
+    public static String normalizePdbId(String externalId, PdbIdFlavor targetFlavor) {
+        if (externalId == null) return null;
+        String trimmed = externalId.trim();
+        boolean isLegacy = IdentifierRegex.isLegacyPdbId(trimmed);
+        boolean isExtended = IdentifierRegex.isExtPdbId(trimmed.toLowerCase());
+
+        if (targetFlavor == PdbIdFlavor.EXTENDED) {
+            if (isLegacy) return EXTENDED_PREFIX + trimmed.toLowerCase();
+            if (isExtended) return trimmed.toLowerCase();
+        } else {
+            if (isExtended) return trimmed.substring(EXTENDED_PREFIX.length()).toUpperCase();
+            if (isLegacy) return trimmed.toUpperCase();
+        }
+        throw new IllegalArgumentException("Invalid PDB ID: " + externalId);
     }
 }

@@ -5,8 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.stream.Stream;
 
@@ -150,5 +149,18 @@ class IdentifierRegexTest {
         assertFalse(IdentifierRegex.isLegacyPdbId(id));
         assertFalse(IdentifierRegex.isExtPdbId(id));
         assertFalse(IdentifierRegex.isAnyPdbId(id));
+    }
+
+    @Test
+    void normalizePdbIdThrowsExceptionForInvalidId() {
+        assertThrows(IllegalArgumentException.class, () -> IdentifierRegex.normalizePdbId("invalid", PdbIdFlavor.LEGACY));
+    }
+
+    @Test
+    void normalizePdbIdWorksForValidIds() {
+        assertEquals("1ABC", IdentifierRegex.normalizePdbId("1abc", PdbIdFlavor.LEGACY));
+        assertEquals("pdb_00001abc", IdentifierRegex.normalizePdbId("1abc", PdbIdFlavor.EXTENDED));
+        assertEquals("1ABC", IdentifierRegex.normalizePdbId("pdb_00001abc", PdbIdFlavor.LEGACY));
+        assertEquals("pdb_00001abc", IdentifierRegex.normalizePdbId("pdb_00001abc", PdbIdFlavor.EXTENDED));
     }
 }
